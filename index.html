@@ -1,9 +1,15 @@
 <!doctype html>
 <head>
-   <link rel="stylesheet" href="lib/codemirror.css"></link>
    <script src="lib/codemirror.js"></script>
    <script src="mode/javascript/javascript.js"></script>
    <script src="mode/css/css.js"></script>
+   <script src="mode/lint/lint.js"></script>
+   <script src="mode/lint/jsonlint.js"></script>
+   <script src="mode/lint/json-lint.js"></script>
+
+   <link rel="stylesheet" href="lib/codemirror.css"></link>
+   <link rel="stylesheet" href="theme/eclipse.css"></link>
+   <link rel="stylesheet" href="mode/lint/lin.css"></link>
    <style>
      body{
 	    background-color: #eee;
@@ -14,7 +20,7 @@
  <div id="codeeditor"> </div>
  <script>
     var editor = CodeMirror(document.getElementById("codeeditor"),{
-	    mode:"css"
+	    mode : "Json"
 	});
  </script>
 </body>
