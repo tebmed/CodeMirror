@@ -3,6 +3,7 @@
    <link rel="stylesheet" href="lib/codemirror.css"></link>
    <script src="lib/codemirror.js"></script>
    <script src="mode/javascript/javascript.js"></script>
+   <script src="mode/css/css.js"></script>
    <style>
      body{
 	    background-color: #eee;
@@ -12,7 +13,9 @@
 <body>
  <div id="codeeditor"> </div>
  <script>
-    var editor = CodeMirror(document.getElementById("codeeditor"));
+    var editor = CodeMirror(document.getElementById("codeeditor"),{
+	    mode:"css"
+	});
  </script>
 </body>
 </html>
