@@ -3,10 +3,17 @@
    <script src="lib/codemirror.js"></script>
    <script src="mode/javascript/javascript.js"></script>
    <script src="mode/css/css.js"></script>
+   <!json>
    <script src="mode/lint/lint.js"></script>
    <script src="mode/lint/jsonlint.js"></script>
    <script src="mode/lint/json-lint.js"></script>
-
+   
+   <!autocomplition>
+   <script src="mode/hint/css-hint.js"></script>
+   <script src="mode/hint/show-hint.js"></script>
+   <link rel="stylesheet" href="mode/hint/show-hint.css"></link>
+   
+   <!css>
    <link rel="stylesheet" href="lib/codemirror.css"></link>
    <link rel="stylesheet" href="theme/eclipse.css"></link>
    <link rel="stylesheet" href="mode/lint/lin.css"></link>
@@ -20,9 +27,10 @@
  <div id="codeeditor"> </div>
  <script>
     var editor = CodeMirror(document.getElementById("codeeditor"),{
-	    mode : "json",
+	    mode : "css",
 		tabsize: 5,
-		lineNumbers: true
+		lineNumbers: true,
+		extraKeys : {"Ctrl-Space":"autocomplete"}
 	});
  </script>
 </body>
